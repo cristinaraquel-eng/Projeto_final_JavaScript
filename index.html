@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo - Projeto Prático</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- Barra de Acessibilidade -->
+    <header class="barra-acessibilidade">
+        <div class="controles-acessibilidade">
+            <button id="btn-diminuir-fonte" type="button" title="Diminuir fonte">A-</button>
+            <button id="btn-aumentar-fonte" type="button" title="Aumentar fonte">A+</button>
+            <button id="btn-tema" type="button">Tema Escuro</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Jogo - Pedra, Papel e Tesoura</h1>
+
+        <!-- Tela 1: Identificação do Jogador -->
+        <section id="tela-cadastro" class="card">
+            <h2>Identificação do Jogador</h2>
+            <p>Informe seu nome ou apelido para começar (mínimo 3 letras, apenas letras e espaços):</p>
+            
+            <form id="form-jogador">
+                <input type="text" id="input-nome" placeholder="Digite seu nome..." autocomplete="off" required>
+                <span id="mensagem-erro" class="erro" aria-live="polite"></span>
+                <button type="submit" id="btn-iniciar" class="btn-principal">Jogar</button>
+            </form>
+        </section>
+
+        <!-- Tela 2: Área do Jogo -->
+        <section id="tela-jogo" class="card oculto">
+            <div class="painel-info">
+                <p>Jogador: <strong id="exibir-nome"></strong></p>
+                <p>Pontuação: <strong id="exibir-pontos">0</strong> pts</p>
+            </div>
+
+            <h2>Escolha sua jogada:</h2>
+            <div class="opcoes-jogada">
+                <button type="button" class="btn-jogada" data-escolha="pedra">Pedra</button>
+                <button type="button" class="btn-jogada" data-escolha="papel">Papel</button>
+                <button type="button" class="btn-jogada" data-escolha="tesoura">Tesoura</button>
+            </div>
+
+            <div id="area-resultado" class="resultado oculto">
+                <p id="texto-escolhas"></p>
+                <h3 id="texto-status"></h3>
+            </div>
+
+            <div class="acoes-rodape">
+                <button type="button" id="btn-trocar-jogador" class="btn-secundario">Trocar Jogador</button>
+                <button type="button" id="btn-zerar-pontos" class="btn-secundario">Zerar Pontuação</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

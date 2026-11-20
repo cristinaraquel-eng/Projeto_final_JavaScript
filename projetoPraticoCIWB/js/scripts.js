@@ -1,10 +1,10 @@
 window.onload = principal; // quando a pag terminar de carregar, chama a funcao principal
 
-let pontuacao;         // pontuacao acumulada do jogador
+let pontuacao; // pontuacao acumulada do jogador
 let tamanhoFonte = 16; // tamanho da fonte em pixels no padrao de 16px
 let temaEscuro = false; // false=tema claro e true=tema escuro
 
-// =======inicio das funcoes=======
+// inicio das funcoes==========================================================================
 
 function principal() {
   // formulario pra identifiaccao
@@ -28,6 +28,7 @@ function principal() {
   carregarDados();
 }
 
+// validacao de dados ===========================================================================
 function carregarDados() {
   // getItem recupera o valor salvoe se nao tiver nada salvo ele retorna null
   let nomeSalvo = localStorage.getItem("nome");
@@ -57,6 +58,7 @@ function novoJogador() {
   mostrarIdentificacao();
 }
 
+// validacao do form=========================================================================================
 function validarDados() {
   let form = document.getElementById("form1");
   let elementos = form.elements; // lista dos campos do formulário
@@ -95,6 +97,8 @@ function mostrarIdentificacao() {
   document.getElementById("identificacao").style.display = "block";
   document.getElementById("jogo").style.display = "none";
 }
+
+// jogo funcionando =================================================================================
 
 function mostrarJogo(nome) {
   document.getElementById("identificacao").style.display = "none";
@@ -142,6 +146,8 @@ function gerarNumero(min, max) {
   return Math.floor(Math.random() * (max + 1 - min)) + min; // formula pra geral numero aleatorio
 }
 
+// parte da pontuacao ============================================================================
+
 function verificarResultado(jogador, computador) { // regras de empate e desempate
   if (jogador == computador) {
     return "empate";
@@ -167,6 +173,8 @@ function atualizarPontuacao(resultado) { // vitoria --> 3 empate --> 1, se perde
   salvarPontuacao(); // guarda a nova pontuacao no localStorage
   document.getElementById("pontuacao").innerHTML = pontuacao;
 }
+
+// parte de acessibilidade====================================================================================
 
 function aumentarFonte() {
   if (tamanhoFonte < 32) { // limite maximo para nn quebrar a pag

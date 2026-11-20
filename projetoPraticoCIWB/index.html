@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto final - Construção de Interfaces Web</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Pedra, Papel e Tesoura</h1>
+    <h1>PEDRA PAPEL TESOURA!</h1>
 
     <!-- botoes pro tamanho da fonte e para o tema -->
     <section id="acessibilidade">
         <button type="button" id="btnAumentarFonte">A+</button>
         <button type="button" id="btnDiminuirFonte">A-</button>
-        <button type="button" id="btnTema">Alternar tema da página</button>
+        <button type="button" id="btnTema" aria-label="Alternar tema claro/escuro">
+            <span class="textoTema">Alternar tema claro/escuro</span>
+            <span class="iconeTema">🌓</span>
+        </button>
     </section>
 
     <!-- identificacao do jogador -->
@@ -32,9 +36,9 @@
 
     <!-- execucao do jogo que comeca oculta, so aparece depois da identificacao -->
     <section id="jogo">
-        <h2>Partida</h2>
+        <h2>🎮PARTIDA🎮</h2>
 
-        <p>Jogador: <span id="nomeJogador"></span></p> <!-- nome do jogador exibido durante a partida -->
+        <p>Jogador: <span id="nomeJogador"> </span></p> <!-- nome do jogador exibido durante a partida -->
 
 
         <!-- pontos acumulados -->
@@ -42,9 +46,20 @@
 
         <!-- interface para realizar as jogadas -->
         <p>Escolha sua jogada:</p>
-        <button type="button" id="btnPedra">Pedra</button>
-        <button type="button" id="btnPapel">Papel</button>
-        <button type="button" id="btnTesoura">Tesoura</button>
+        <button type="button" id="btnPedra">
+            <img src="img/pedra.png" alt="botão de pedra">
+            Pedra
+        </button>
+
+        <button type="button" id="btnPapel">
+            <img src="img/papel.png" alt="botão de escoolher papel">
+            Papel
+        </button>
+
+        <button type="button" id="btnTesoura">
+            <img src="img/tesoura.png" alt="botão de escolher tesoura">
+            Tesoura
+        </button>
 
         <p id="resultado"></p>  <!--se foi vitoria derrota ou empate aparece aq -->
 

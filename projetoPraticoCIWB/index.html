@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto final - Construção de Interfaces Web</title>
+</head>
+<body>
+
+    <h1>Pedra, Papel e Tesoura</h1>
+
+    <!-- botoes pro tamanho da fonte e para o tema -->
+    <section id="acessibilidade">
+        <button type="button" id="btnAumentarFonte">A+</button>
+        <button type="button" id="btnDiminuirFonte">A-</button>
+        <button type="button" id="btnTema">Alternar tema da página</button>
+    </section>
+
+    <!-- identificacao do jogador -->
+    <section id="identificacao">
+        <h2>Identificação do jogador</h2>
+        <form action="" method="post" name="form" id="form1">
+            <label for="nome">
+                Digite seu nome ou apelido:
+            </label>
+            <input type="text" name="nome" id="nome" required="required" /> <!-- validacao feita no js-->
+
+            <!-- botao para jogar, valida o nome e iniciar o jogo -->
+            <input type="submit" name="submeter" value="Jogar" />
+        </form>
+    </section>
+
+    <!-- execucao do jogo que comeca oculta, so aparece depois da identificacao -->
+    <section id="jogo">
+        <h2>Partida</h2>
+
+        <p>Jogador: <span id="nomeJogador"></span></p> <!-- nome do jogador exibido durante a partida -->
+
+
+        <!-- pontos acumulados -->
+        <p>Pontuação: <span id="pontuacao"> 0</span></p>
+
+        <!-- interface para realizar as jogadas -->
+        <p>Escolha sua jogada:</p>
+        <button type="button" id="btnPedra">Pedra</button>
+        <button type="button" id="btnPapel">Papel</button>
+        <button type="button" id="btnTesoura">Tesoura</button>
+
+        <p id="resultado"></p>  <!--se foi vitoria derrota ou empate aparece aq -->
+
+        <button type="button" id="btnNovoJogador">Novo jogador</button>  <!-- remove os dados salvos para outro jogador começar -->
+    </section>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

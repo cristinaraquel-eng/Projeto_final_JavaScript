@@ -1,0 +1,73 @@
+*{
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#acessibilidade {
+    /* text-align: right; */
+    position: absolute;
+    top: 33px;
+    right: 20px;
+}
+
+/* pro emoji do tema fica escondido na telona... */
+.iconeTema {
+  display: none;
+}
+
+button img {
+  display: block; /* a imagem ocupa a linha toda, ent o texto vai para baixo dela */
+  width: 80px; /* tamanho da imagem */
+  margin: 0 auto; /* centraliza a imagem dentro do botao */
+}
+
+@media screen and (min-width: 250px) and (max-width: 400px){
+
+    #acessibilidade{
+        position: static;
+        float: right; /* pros botoes ficarem ao lado */
+        /*text-align: right;*/
+    }
+
+    /* ppros botoes ficarem em coluna */
+    #acessibilidade button {
+    display: block;
+    margin: 5px 0 5px auto; /* cima, direita, baixo, esquerda */
+  }
+
+  /* ... ena tela pequena esconde o texto e mostra o emoji */
+  .textoTema {
+    display: none;
+  }
+
+  .iconeTema {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 799px){
+
+    #acessibilidade{
+        position: static;
+        float: right; /* pros botoes ficarem ao lado */
+        /*text-align: right;*/
+    }
+
+    /* ppros botoes ficarem em coluna */
+    #acessibilidade button {
+    display: block;
+    margin: 5px 0 5px auto; /* cima, direita, baixo, esquerda */
+  }
+
+  /* ... ena tela pequena esconde o texto e mostra o emoji */
+  .textoTema {
+    display: none;
+  }
+
+  .iconeTema {
+    display: inline;
+  }
+}
